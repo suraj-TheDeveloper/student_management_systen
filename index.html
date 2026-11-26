@@ -11,7 +11,7 @@
         <div class="registration-box">
             <h1>Student Registration</h1>
             <span id="error-message"></span>
-            <form>
+            <form onsubmit="formsubmit(event)">
                 <div class="form-group">
                     <label for="name">Name<span class="required">*</span> </label>
                     <input type="text" name="name" id="name" placeholder="Enter Name..." required>
@@ -28,7 +28,7 @@
                     <label for="course">Course<span class="required">*</span> </label>
                     <input type="text" name="course" id="course" placeholder="Enter Course..." required>
                 </div>
-                <button class="btn-submit" onclick="formsubmit()">Submit</button>
+                <button class="btn-submit">Submit</button>
             </form>
         </div>
         <table>
@@ -41,14 +41,9 @@
                     <th>Course</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Suraj</td>
-                    <td>s@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>Data Science</td>
-                </tr>
+
+            <tbody id="student-table-body">
+                <!-- Student records will be loaded from FastAPI -->
             </tbody>
         </table>
     </div>
