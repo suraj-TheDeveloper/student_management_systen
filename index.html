@@ -12,6 +12,7 @@
             <h1>Student Registration</h1>
             <span id="error-message"></span>
             <form onsubmit="formsubmit(event)">
+                <input type="hidden" id="student-id">
                 <div class="form-group">
                     <label for="name">Name<span class="required">*</span> </label>
                     <input type="text" name="name" id="name" placeholder="Enter Name..." required>
@@ -39,6 +40,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Course</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
 
